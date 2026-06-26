@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%; /* Ice Blue */
+    --foreground: 222 47% 11%; /* Charcoal */
+    
+    --primary: 221 83% 53%; /* Electric Blue */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 174 84% 32%; /* Teal Green */
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 174 84% 32%; /* Teal Green */
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 210 40% 94%;
+    --muted-foreground: 215 16% 47%;
+    
+    --card: 210 40% 98%; /* Ice Blue */
+    --card-foreground: 222 47% 11%; /* Charcoal */
+    
+    --popover: 210 40% 98%;
+    --popover-foreground: 222 47% 11%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%; /* Electric Blue */
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 222 47% 11%; /* Charcoal */
+    --foreground: 210 40% 98%; /* Ice Blue */
+    
+    --primary: 221 83% 53%; /* Electric Blue */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 174 84% 32%; /* Teal Green */
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 174 84% 32%; /* Teal Green */
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 221 83% 53%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: clip;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    text-wrap: balance;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+  
+  p {
+    @apply leading-relaxed;
+    max-width: 65ch;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .logo-container {
+    @apply flex items-center gap-2;
+  }
+  
+  .logo-image {
+    @apply object-contain max-w-full;
+    aspect-ratio: auto;
+  }
+  
+  .logo-link {
+    @apply no-underline;
+  }
+}
+
+@layer utilities {
+  .logo-hover-scale {
+    transition: transform 300ms ease-in-out;
+  }
+  
+  .logo-hover-scale:hover {
+    @apply scale-105;
+  }
+  
+  .logo-glow {
+    transition: filter 300ms ease-in-out;
+  }
+  
+  .logo-glow:hover {
+    filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.4));
+  }
+  
+  .logo-animation {
+    @apply transition-all duration-300;
+  }
+}
