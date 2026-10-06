@@ -39,7 +39,7 @@ const Header = () => {
           <Link to="/" className="logo-link logo-container logo-hover-scale logo-glow logo-animation">
             <img 
               src="https://horizons-cdn.hostinger.com/9f69b16c-5d81-4987-8690-e98de4801667/419d213ed223bb0eba9c636a1a6502fe.png" 
-              alt="AASHWAST Enterprises Private Limited - Blue shield with hands holding globe icon"
+              alt="AASHWAST Enterprises Pvt-Ltd icon"
               className="logo-image h-[40px] md:h-[60px] lg:h-[80px]"
             />
           </Link>
